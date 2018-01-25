@@ -1,0 +1,41 @@
+> source('~/Desktop/R Prgramming Coursera/ProgrammingAssignment2-master/cachematrix.R')
+> my_matrix <- makeCacheMatrix(matrix(5:8,2,2))
+> 
+> my_matrix$get()
+     [,1] [,2]
+[1,]    5    7
+[2,]    6    8
+> my_matrix$getInverse()
+NULL
+> cacheSolve(my_matrix)
+> cacheSolve(my_matrix)
+getting cached result
+     [,1] [,2]
+[1,]   -4  3.5
+[2,]    3 -2.5
+> my_matrix$getInverse()
+     [,1] [,2] 			#inverse of my matrix
+[1,]   -4  3.5
+[2,]    3 -2.5
+> my_matrix$getInverse()
+     [,1] [,2]
+[1,]   -4  3.5
+[2,]    3 -2.5
+> my_matrix$set(matrix(c(2,2,5,8),2,2))
+> my_matrix$get()
+     [,1] [,2]
+[1,]    2    5
+[2,]    2    8
+> my_matrix$getInverse()
+NULL
+> cacheSolve(my_matrix)
+> cacheSolve(my_matrix)
+getting cached result
+           [,1]       [,2]
+[1,]  1.3333333 -0.8333333
+[2,] -0.3333333  0.3333333
+> my_matrix$getInverse()
+           [,1]       [,2]
+[1,]  1.3333333 -0.8333333			#Inverse of my matrix
+[2,] -0.3333333  0.3333333
+> source('~/Desktop/R Prgramming Coursera/ProgrammingAssignment2-master/cachematrix.R')
